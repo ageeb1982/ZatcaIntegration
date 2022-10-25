@@ -43,6 +43,7 @@ namespace ZatcaIntegration
             Result res = new Result();
 
             inv.ID = "1230"; // مثال SME00010
+            inv.UUID = Guid.NewGuid().ToString();
             inv.IssueDate = "2021-01-05";
             inv.IssueTime = "09:32:40";
             //388 فاتورة  
@@ -173,15 +174,14 @@ namespace ZatcaIntegration
 
             InvoiceReportingRequest invrequestbody = new InvoiceReportingRequest();
             tokenresponse = apireqlogic.GetComplianceCSIDAPI("12345", "");
-             
+            
             if (string.IsNullOrEmpty(tokenresponse.ErrorMessage))
             {
                 //MessageBox.Show(tokenresponse.BinarySecurityToken);
                 invrequestbody.invoice = res.EncodedInvoice;
                 invrequestbody.invoiceHash = res.InvoiceHash;
                 invrequestbody.uuid = res.UUID;
-
-                InvoiceReportingResponse invoicereportingmodel = apireqlogic.CallComplianceInvoiceAPI(tokenresponse.BinarySecurityToken, tokenresponse.Secret, invrequestbody);
+               InvoiceReportingResponse invoicereportingmodel = apireqlogic.CallComplianceInvoiceAPI(tokenresponse.BinarySecurityToken, tokenresponse.Secret, invrequestbody);
                 if (string.IsNullOrEmpty(invoicereportingmodel.ErrorMessage))
                 {
                     MessageBox.Show(invoicereportingmodel.ReportingStatus); //REPORTED
@@ -377,6 +377,7 @@ namespace ZatcaIntegration
             Result res = new Result();
 
             inv.ID = "1230"; // مثال SME00010
+            inv.UUID = Guid.NewGuid().ToString();
             inv.IssueDate = "2021-01-05";
             inv.IssueTime = "09:32:40";
             //388 فاتورة  
@@ -538,6 +539,7 @@ namespace ZatcaIntegration
             Result res = new Result();
 
             inv.ID = "1230"; // مثال SME00010
+            inv.UUID = Guid.NewGuid().ToString();
             inv.IssueDate = "2021-01-05";
             inv.IssueTime = "09:32:40";
             //388 فاتورة  
@@ -699,6 +701,7 @@ namespace ZatcaIntegration
             Result res = new Result();
 
             inv.ID = "1230"; // مثال SME00010
+            inv.UUID = Guid.NewGuid().ToString();
             inv.IssueDate = "2021-01-05";
             inv.IssueTime = "09:32:40";
             //388 فاتورة  
@@ -859,6 +862,7 @@ namespace ZatcaIntegration
             Result res = new Result();
 
             inv.ID = "1230"; // مثال SME00010
+            inv.UUID = Guid.NewGuid().ToString();
             inv.IssueDate = "2021-01-05";
             inv.IssueTime = "09:32:40";
             //388 فاتورة  
