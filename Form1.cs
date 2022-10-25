@@ -43,6 +43,7 @@ namespace ZatcaIntegration
             Result res = new Result();
 
             inv.ID = "1230"; // مثال SME00010
+            inv.UUID = Guid.NewGuid().ToString();
             inv.IssueDate = "2021-01-05";
             inv.IssueTime = "09:32:40";
             //388 فاتورة  
@@ -377,6 +378,7 @@ namespace ZatcaIntegration
             Result res = new Result();
 
             inv.ID = "1230"; // مثال SME00010
+            inv.UUID = Guid.NewGuid().ToString();
             inv.IssueDate = "2021-01-05";
             inv.IssueTime = "09:32:40";
             //388 فاتورة  
@@ -538,6 +540,7 @@ namespace ZatcaIntegration
             Result res = new Result();
 
             inv.ID = "1230"; // مثال SME00010
+            inv.UUID = Guid.NewGuid().ToString();
             inv.IssueDate = "2021-01-05";
             inv.IssueTime = "09:32:40";
             //388 فاتورة  
@@ -699,6 +702,7 @@ namespace ZatcaIntegration
             Result res = new Result();
 
             inv.ID = "1230"; // مثال SME00010
+            inv.UUID = Guid.NewGuid().ToString();
             inv.IssueDate = "2021-01-05";
             inv.IssueTime = "09:32:40";
             //388 فاتورة  
@@ -859,6 +863,7 @@ namespace ZatcaIntegration
             Result res = new Result();
 
             inv.ID = "1230"; // مثال SME00010
+            inv.UUID = Guid.NewGuid().ToString();
             inv.IssueDate = "2021-01-05";
             inv.IssueTime = "09:32:40";
             //388 فاتورة  
