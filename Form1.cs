@@ -174,15 +174,14 @@ namespace ZatcaIntegration
 
             InvoiceReportingRequest invrequestbody = new InvoiceReportingRequest();
             tokenresponse = apireqlogic.GetComplianceCSIDAPI("12345", "");
-             
+            
             if (string.IsNullOrEmpty(tokenresponse.ErrorMessage))
             {
                 //MessageBox.Show(tokenresponse.BinarySecurityToken);
                 invrequestbody.invoice = res.EncodedInvoice;
                 invrequestbody.invoiceHash = res.InvoiceHash;
                 invrequestbody.uuid = res.UUID;
-
-                InvoiceReportingResponse invoicereportingmodel = apireqlogic.CallComplianceInvoiceAPI(tokenresponse.BinarySecurityToken, tokenresponse.Secret, invrequestbody);
+               InvoiceReportingResponse invoicereportingmodel = apireqlogic.CallComplianceInvoiceAPI(tokenresponse.BinarySecurityToken, tokenresponse.Secret, invrequestbody);
                 if (string.IsNullOrEmpty(invoicereportingmodel.ErrorMessage))
                 {
                     MessageBox.Show(invoicereportingmodel.ReportingStatus); //REPORTED
