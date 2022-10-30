@@ -46,7 +46,7 @@
     <Reference Include="System.Xml" />
     <Reference Include="ZatcaIntegrationSDK, Version=1.0.8329.43146, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>bin\Debug\ZatcaIntegrationSDK.dll</HintPath>
+      <HintPath>..\..\ZatcaIntegrationSDK\bin\Debug\ZatcaIntegrationSDK.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -82,6 +82,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="bin_files\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
